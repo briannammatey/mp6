@@ -7,9 +7,17 @@ if (!clientId || !clientSecret) {
     throw new Error("Missing credentials");
 
 }
+console.log(" auth.ts loaded");
+
+console.log(" env check", {
+    clientId: process.env.GOOGLE_CLIENT_ID,
+    secret: process.env.GOOGLE_CLIENT_SECRET,
+});
 export const {handlers, auth, signIn, signOut} = NextAuth({
     providers: [Google({
         clientId,
         clientSecret
     })],
 })
+
+console.log(" handlers:", handlers);
