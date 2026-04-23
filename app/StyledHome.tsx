@@ -37,7 +37,7 @@ const StyledButton = styled.button`
     border-radius: 8px;
     color: white;
     background-color:#4600bf;
-    
+    cursor: pointer;
 
 
     &:hover {
